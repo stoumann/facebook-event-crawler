@@ -26,7 +26,7 @@ app.get("/", (req, resp) => {
       .then(res => {
         var $ = cheerio.load(res.data);
         var json = $('script[type="application/ld+json"]')[0].children[0].data;
-        resp.send(json);
+        resp.send(JSON.parse(json));
       })
       .catch(err => {
         console.log(err);
