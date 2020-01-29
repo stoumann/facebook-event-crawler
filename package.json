@@ -4,8 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "build": "nodemon src/index.js"
+    "start": "node src/server.js"
   },
   "dependencies": {
     "axios": "0.19.2",
