@@ -4,7 +4,10 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 const express = require("express");
+const cors = require("cors");
 const app = express();
+
+app.use(cors());
 
 app.get("/", (req, resp) => {
   console.log(req.query);
