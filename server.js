@@ -1,15 +1,6 @@
-// const jsonld_request = require("jsonld-request");
+// This is to fetch the json data from a facebook event url
+// Example: https://www.facebook.com/events/1007081202966526/
 
-// jsonld_request("https://www.facebook.com/events/1007081202966526/", function(
-//   err,
-//   res,
-//   data
-// ) {
-//   res.body = "";
-//   console.log(res.json);
-// });
-
-// const request = require("request");
 const cheerio = require("cheerio");
 const axios = require("axios");
 const express = require("express");
