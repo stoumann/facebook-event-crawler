@@ -24,7 +24,10 @@ app.get("/", (req, resp) => {
           $(".scaledImageFitWidth").attr("src") ||
           $(".scaledImageFitHeight").attr("src");
 
+        json = JSON.parse(json);
         json.image = image;
+
+        json = JSON.stringify(json);
         resp.send(JSON.parse(json));
       })
       .catch(err => {
