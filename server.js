@@ -20,6 +20,11 @@ app.get("/", (req, resp) => {
       .then(res => {
         var $ = cheerio.load(res.data);
         var json = $('script[type="application/ld+json"]')[0].children[0].data;
+        var image =
+          $(".scaledImageFitWidth").attr("src") ||
+          $(".scaledImageFitHeight").attr("src");
+
+        json.image = image;
         resp.send(JSON.parse(json));
       })
       .catch(err => {
