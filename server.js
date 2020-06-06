@@ -31,6 +31,8 @@ app.get("/", (req, resp) => {
         resp.send(JSON.parse(json));
       })
       .catch(err => {
+        resp.status(500);
+        resp.send("Your url is incorrect!");
         console.log(err);
       });
   } else {
