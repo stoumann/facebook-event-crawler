@@ -34,6 +34,7 @@ app.get("/", (req, resp) => {
         console.log(err);
       });
   } else {
+    resp.status(500);
     resp.send("You need to add the event-url parameter");
   }
 });
